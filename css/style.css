@@ -73,9 +73,6 @@ h1 {
   color: #fff;
 }
 
-/* .burger-btn{
-  display: none;
-} */
 
 /* fv  */
 .fv{
@@ -276,9 +273,7 @@ footer{
   h1{
     font-size: 2rem;
   }
-  /* .header__nav{
-    display: none;
-  } */
+  
   /* fv */
   .fv{
     margin: 0 5%;
@@ -408,9 +403,9 @@ footer{
     /* ------------------ */
 /* humberger-menu */
 /* ------------------ */
-/* .header{
+.header{
   padding: 0 5%;
-} */
+}
 .burger_btn{
   display: block;
   width: 39px;
