@@ -26,25 +26,20 @@ $('.slider').slick({
 });
 
 // burger
-  // $('.burger_btn').on('click',function(){//.btn_triggerをクリックすると
-  //   $('.burger_btn').toggleClass('close');//.btn_triggerにcloseクラスを付与(ボタンのアニメーション)
-  //   $('.header__nav_wrapper').fadeToggle(500);//.nav-wrapperが0.5秒でフェードイン(メニューのフェードイン)
-  //   $('body').toggleClass('noscroll');//bodyにnoscrollクラスを付与(スクロールを固定)
-  //  });
+$('.burger_btn').on('click',function(){//.btn_triggerをクリックすると
+  $('.burger_btn').toggleClass('close');//.btn_triggerにcloseクラスを付与(ボタンのアニメーション)
+  $('.header__nav_wrapper').fadeToggle(500);//.nav-wrapperが0.5秒でフェードイン(メニューのフェードイン)
+//   $('body').toggleClass('noscroll');//bodyにnoscrollクラスを付与(スクロールを固定)
+ });
 
-  
-  //   // if( $(window).width() < 768 ){//デバイスの幅が768以下のとき
-  //     $('.header__nav_li>a').on('click',function(){//.nav-item>aをクリックすると
-  //       if( $(window).width() < 768 ){//デバイスの幅が768以下のとき
-  //       $('.header__nav_wrapper').fadeOut(500);//.nav-wrapperが0.5秒でフェードアウト(メニューのフェードアウト)
-  //       $('.burger_btn').removeClass('close');//.btn_triggerのcloseクラスを削除
-  //       $('body').removeClass('noscroll');//bodyのnoscrollクラスを削除
-  //     }
-  //     });
-  //   // }
-
-  $(function(){
-    $('.burger_btn').on('click', function(){
-      $('.header__nav_ul').toggleClass('.is-active');
-    });
-  }());
+ 
+  $('.header__nav_li>a').on('click',function(){//.nav-item>aをクリックすると
+    if( $(window).width() < 768 ){//デバイスの幅が768以下のとき
+    $('.header__nav_wrapper').fadeOut(500);//.nav-wrapperが0.5秒でフェードアウト(メニューのフェードアウト)
+    $('.burger_btn').removeClass('close');//.btn_triggerのcloseクラスを削除
+    // $('body').removeClass('noscroll');//bodyのnoscrollクラスを削除
+    }
+    window.matchMedia('(max-width: 768px)').addEventListener('change', e => {
+        if (!e.matches) $('.header__nav_wrapper').attr('style', null);
+      });
+  });
